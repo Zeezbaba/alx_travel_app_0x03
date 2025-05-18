@@ -1,4 +1,4 @@
 .env
 alx_travel_app/__pycache__/
-listings/__pycache__/
-listings/migrations/__pycache__/
+alx_travel_app/listings/__pycache__/
+alx_travel_app/listings/migrations/__pycache__/
