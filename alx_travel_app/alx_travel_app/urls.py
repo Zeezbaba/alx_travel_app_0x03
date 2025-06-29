@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.http import HttpResponse
 from django.urls import path, re_path, include
 from django.shortcuts import redirect
 from rest_framework import permissions
@@ -31,9 +32,13 @@ schema_view = get_schema_view(
     permission_classes=[permissions.AllowAny],
 )
 
+def payment_success(request):
+    return HttpResponse("Payment was successful!")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', lambda request: redirect('swagger/', permanent=False)),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('api/', include('listings.urls')),
+    path('payment-success/', payment_success, name='payment-success'),
 ]
