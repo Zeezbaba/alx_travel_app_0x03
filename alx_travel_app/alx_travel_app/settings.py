@@ -84,6 +84,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'alx_travel_app.wsgi.application'
 
+CELERY_BROKER_URL = 'amqp://localhost'
+
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
