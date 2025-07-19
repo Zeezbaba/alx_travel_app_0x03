@@ -92,7 +92,7 @@ CELERY_BROKER_URL = 'amqp://localhost'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django', # 'django.db.backends.mysql'
         'NAME': env('DB_NAME'),
         'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),
