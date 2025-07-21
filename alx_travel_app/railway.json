@@ -1,3 +1,4 @@
+// Set DOCKERFILE as the builder
 {
   "build": {
     "builder": "DOCKERFILE"
